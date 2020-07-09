@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>小型翻译软件</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>301</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>翻译模式选择</string>
+    </property>
+    <widget class="QRadioButton" name="rBtnCHN_to_EN">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>中翻英</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rBtnEN_to_CHN">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>英翻中</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="BtnTranslate">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>660</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>翻译</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnExit">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>660</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>90</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>注意！英文输入请在逗号或句号后加上空格！</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>159</y>
+      <width>1111</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QPlainTextEdit" name="plainText_EN"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="plainText_CHN"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>英文</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>中文</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>100</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>字体大小</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinFontSize"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>选择词典文件</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAlternative">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>620</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>对翻译不满意？点击此处替换</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actCopy_EN"/>
+   <addaction name="actPaste_EN"/>
+   <addaction name="actCut_EN"/>
+   <addaction name="actClear_EN"/>
+   <addaction name="separator"/>
+   <addaction name="actCopy_CHN"/>
+   <addaction name="actPaste_CHN"/>
+   <addaction name="actCut_CHN"/>
+   <addaction name="actClear_CHN"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actOpenDic">
+   <property name="text">
+    <string>选择词典文件</string>
+   </property>
+  </action>
+  <action name="actCopy_EN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/copy.jpg</normaloff>:/image/copy.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>复制英文</string>
+   </property>
+  </action>
+  <action name="actCut_EN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/jianqie.jpg</normaloff>:/image/jianqie.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>剪切英文</string>
+   </property>
+  </action>
+  <action name="actPaste_EN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/paste.jpg</normaloff>:/image/paste.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴英文</string>
+   </property>
+  </action>
+  <action name="actCopy_CHN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/copy.jpg</normaloff>:/image/copy.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>复制中文</string>
+   </property>
+  </action>
+  <action name="actPaste_CHN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/paste.jpg</normaloff>:/image/paste.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴中文</string>
+   </property>
+  </action>
+  <action name="actCut_CHN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/jianqie.jpg</normaloff>:/image/jianqie.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>剪切中文</string>
+   </property>
+  </action>
+  <action name="actClear_EN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/clear.jpg</normaloff>:/image/clear.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>清除英文</string>
+   </property>
+  </action>
+  <action name="actClear_CHN">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/image/clear.jpg</normaloff>:/image/clear.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>清除中文</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rsc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actCopy_EN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_EN</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actCopy_CHN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_CHN</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actCut_EN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_EN</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actCut_CHN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_CHN</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actPaste_EN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_EN</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actPaste_CHN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_CHN</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actClear_EN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_EN</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actClear_CHN</sender>
+   <signal>triggered()</signal>
+   <receiver>plainText_CHN</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BtnExit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>718</x>
+     <y>746</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>812</x>
+     <y>744</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

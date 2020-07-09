@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/txtFiles">
+        <file>new 1.txt</file>
+        <file>Dictionary.txt</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>copy.jpg</file>
+        <file>jianqie.jpg</file>
+        <file>paste.jpg</file>
+        <file>clear.jpg</file>
+    </qresource>
+</RCC>
